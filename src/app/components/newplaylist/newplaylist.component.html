@@ -1,0 +1,36 @@
+<html>
+        <app-navbar></app-navbar> 
+<body>
+        <p id = 'current'>{{currentPlaylist.description}}</p>
+        <div class="container">
+               
+                <div class = "row">
+                        <div class="col-md-2">
+                                <button  class="btn btn-dark" (click) = 'showNewPlayistId()'>New playlist</button>
+                                <!-- <input [(ngModel)] = 'code' placeholder="access code" name = 'code'><button (click) = 'saveAccessCode(code)'>SuBmit</button> -->
+                         </div>
+                        <div class ="col-md-4">
+                                <iframe [src]=  cleanUrl(currentPlaylist.name) width ="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                        <div class = "col-md-4">
+                                <h3 id = "name">{{searched1.tracks.items[0].name}}</h3>
+                                <h4 id = "artist">{{searched1.tracks.items[0].artists[0].name}}</h4>
+                                <h5 id = "album">{{searched1.tracks.items[0].album.name}} </h5>
+                        </div>
+                </div>
+                <div id= "mv" class ="row">
+                        <div class = "col-md-2"></div>
+                        <div class = "col-md-4">
+                                <input     [(ngModel)] = 'search' name = 'search' >
+                                <button (click) = 'searchedForTrack(search)'>Search</button>
+                                <button (click) = 'postTrack(currentPlaylist.name, searched1.tracks.items[0].id)'>Add Track</button>
+                                <button (click) = savePlaylist()>Save list</button>
+                        </div>
+                        <div class = "col-md-4"></div>
+                </div>
+        </div>
+        
+        
+        <router-outlet></router-outlet>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* body { */
+    /* background-image: url('src\assets\SpotEarth-min.jpg') */
+    /* background-color: black;
+    height: 200%;
+    width: 100%; */
+   /* }      */
+
+/* iframe{
+    position: sticky;
+    right :-100px;
+} */
+#current{
+    color: bisque;
+}
+body{
+    background-color: #1db954;
+}
+
+#mv{
+    left: 12px;
+}
+#album{
+    color: white;
+    background-color: black;
+    border: 20px cornsilk;
+    padding: 23px white;
+    margin: 41px white; 
+}
+
+
+#artist{
+    color: white;
+    background-color: black;
+    border: 10px;
+    padding: 40px;
+    margin: 10px;
+}
+
+#name{
+    color: white; 
+    background-color: black;
+    border: 10px;
+    padding: 40px;
+    margin: 10px;
+    
+    
+}

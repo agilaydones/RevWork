@@ -1,0 +1,43 @@
+
+
+
+<body>
+    <app-navbar></app-navbar> 
+  <div class = "container">
+    <h1 id = "friends">Friends List</h1>
+<table class = 'table'>
+<tr>
+  <th>
+    Email
+  </th>
+  <th>
+    User Id
+  </th>
+</tr>
+    <tr *ngFor = 'let user of currentUsers1.Users1'>
+      <td >
+        {{user.email}}
+      </td>
+      <td (click) = selectUser(user.id)>
+        {{user.id}}
+      </td>
+    </tr>
+</table>
+<div class= "row">
+  <div class = "col-md-8">
+    <h1 id = "greenH">Your Playlists</h1>
+    <iframe *ngFor = 'let list of currentPlaylists.playlist.playlist' [src]=  cleanUrl(list.id) width ="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+  <div class = "col-md-4">
+    <h1 id = "greenH">Suggested Playlist</h1>
+    <iframe [src]=  cleanUrl(SplaylistId) width ="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <button (click)=  'putUser(currentPlaylists.playlist.id,playlisyObj)'>Save Playlist</button>
+    <button (click) = 'putUser(sel, currentPlaylists.playlist.id)' >Give This One to A friend</button>
+  </div>
+
+</div>
+</div>
+
+<!-- <button (click) ='getUser1()'>New Get User</button> -->
+</body>
+
